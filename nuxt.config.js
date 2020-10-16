@@ -1,3 +1,5 @@
+import cities from './static/routes.json'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -26,6 +28,7 @@ export default {
     cache: {
       ignore: ['jest.config.js'], // ignore changes applied on this file
     },
+    routes: cities,
   },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
@@ -44,11 +47,10 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    build: {
-      analyze: {
-        analyzerMode: 'static',
-      },
-    },
+
+    // analyze: {
+    //   analyzerMode: 'static',
+    // },
     extractCSS: true,
     extend(config, ctx) {},
     html: {
@@ -64,6 +66,9 @@ export default {
         useShortDoctype: true,
       },
     },
+  },
+  render: {
+    injectScripts: true,
   },
   vue: {
     config: {
