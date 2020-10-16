@@ -1,4 +1,14 @@
+<template>
+  <div>
+    {{ city.title }}
+  </div>
+</template>
+
 <script>
-import Index from '~/pages/_city/_neighbourhood.vue'
-export default Index
+export default {
+  asyncData({ params, error, payload }) {
+    if (payload) return { city: payload }
+    else return { city: { title: 'Oosplein' } }
+  },
+}
 </script>
