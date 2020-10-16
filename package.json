@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "build": "nuxt generate",
+    "build": "nuxt generate --modern --quiet",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
