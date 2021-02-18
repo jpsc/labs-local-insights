@@ -1,4 +1,4 @@
-import cities from './static/routes.json'
+import cities from './routes'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
