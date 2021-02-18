@@ -24,13 +24,6 @@ export default {
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
-  generate: {
-    cache: {
-      ignore: ['jest.config.js'], // ignore changes applied on this file
-    },
-    routes: cities,
-  },
-
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -77,12 +70,19 @@ export default {
   },
   features: {
     store: false,
-    // layouts: false,
     transitions: false,
     deprecations: false,
-    // middleware: false,
+    middleware: false,
     validate: false,
     clientOnline: false,
     clientPrefetch: false,
+  },
+
+  generate: {
+    fallback: false,
+    cache: {
+      ignore: ['jest.config.js'], // ignore changes applied on this file
+    },
+    routes: cities,
   },
 }

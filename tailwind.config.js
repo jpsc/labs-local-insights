@@ -1,3 +1,3 @@
 module.exports = {
-  presets: [require('@funda/tailwind-config').config],
+  presets: [require('@funda/tailwind-config')],
 }
