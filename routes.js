@@ -11,7 +11,14 @@ const makeRoute = function () {
 }
 
 const numberOfCities = 100
-const routes = []
+const routes = [
+  {
+    route: `/amsterdam/testing`,
+    payload: {
+      title: 'Testing city',
+    },
+  },
+]
 
 for (let i = 0; i < numberOfCities; i++) {
   routes.push(makeRoute())

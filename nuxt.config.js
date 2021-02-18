@@ -72,7 +72,6 @@ export default {
     store: false,
     transitions: false,
     deprecations: false,
-    middleware: false,
     validate: false,
     clientOnline: false,
     clientPrefetch: false,
