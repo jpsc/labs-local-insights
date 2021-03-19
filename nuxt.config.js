@@ -17,6 +17,13 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
+  // Tailwind config (https://tailwindcss.nuxtjs.org/)
+  tailwindcss: {
+    jit: true,
+    config: {
+      presets: [require('@funda/tailwind-config')],
+    }
+  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -60,9 +67,6 @@ export default {
       },
     },
   },
-  render: {
-    injectScripts: true,
-  },
   vue: {
     config: {
       productionTip: false,
@@ -74,12 +78,11 @@ export default {
     deprecations: false,
     validate: false,
     clientOnline: false,
-    clientPrefetch: false,
   },
 
   generate: {
-    fallback: false,
     cache: {
+      crawler: false,
       ignore: ['jest.config.js'], // ignore changes applied on this file
     },
     routes: cities,
