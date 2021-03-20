@@ -56,6 +56,7 @@ export default {
     // analyze: {
     //   analyzerMode: 'static',
     // },
+    extractCSS: true,
     extend(config, ctx) {},
     html: {
       minify: {
