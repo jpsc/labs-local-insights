@@ -15,16 +15,6 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
-  // Tailwind config (https://tailwindcss.nuxtjs.org/)
-  tailwindcss: {
-    jit: true,
-    config: {
-      presets: [require('@funda/tailwind-config')],
-    }
-  },
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
@@ -37,10 +27,25 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://github.com/nuxt-community/svg-sprite-module
+    '@nuxtjs/svg-sprite',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [],
+
+  // Tailwind config (https://tailwindcss.nuxtjs.org/)
+  tailwindcss: {
+    jit: true,
+    config: {
+      presets: [require('@funda/tailwind-config')],
+    },
+  },
+
+  svgSprite: {
+    input: '~/assets/icons/',
+    elementClass: 'fill-current h-4 w-4',
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
@@ -51,7 +56,6 @@ export default {
     // analyze: {
     //   analyzerMode: 'static',
     // },
-    extractCSS: true,
     extend(config, ctx) {},
     html: {
       minify: {

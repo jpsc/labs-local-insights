@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div class="bg-orange-2 h-[48px] w-full"></div>
+    <svg-icon name="add-house" />
     {{ city.title }}
   </div>
 </template>
