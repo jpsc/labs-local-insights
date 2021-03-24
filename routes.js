@@ -18,6 +18,12 @@ const routes = [
       title: 'Testing city',
     },
   },
+  {
+    route: `/`,
+    payload: {
+      title: 'Testing city',
+    },
+  },
 ]
 
 for (let i = 0; i < numberOfCities; i++) {
