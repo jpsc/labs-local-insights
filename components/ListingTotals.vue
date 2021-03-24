@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post">
-      {{ post.title }}
-    </div>
+    {{ serverResponse }}
   </div>
 </template>
 
@@ -10,11 +8,11 @@
 export default {
   data() {
     return {
-      posts: null,
+      serverResponse: null,
     }
   },
   async fetch() {
-    this.posts = await this.$http.$get('https://api.nuxtjs.dev/posts')
+    this.serverResponse = await this.$http.$get('/api/listing-totals')
   },
   fetchOnServer: false,
 }

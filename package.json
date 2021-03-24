@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
+    "predev:api": "func extensions install --prefix api/",
+    "dev:api": "func start --prefix api/",
     "build": "nuxt generate --modern",
     "test": "jest --passWithNoTests"
   },

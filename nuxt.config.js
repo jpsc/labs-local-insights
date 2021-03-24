@@ -1,4 +1,5 @@
 import cities from './routes'
+const dev = process.env.NODE_ENV !== 'production'
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -45,6 +46,13 @@ export default {
   svgSprite: {
     input: '~/assets/icons/',
     elementClass: 'fill-current h-4 w-4',
+  },
+
+  http: {
+    proxy: true,
+  },
+  proxy: {
+    '/api/': dev ? 'http://localhost:7071/' : '/',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
