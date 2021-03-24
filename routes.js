@@ -10,7 +10,7 @@ const makeRoute = function () {
   }
 }
 
-const numberOfCities = 100
+const numberOfCities = 1
 const routes = [
   {
     route: `/amsterdam/testing`,

@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "nuxt",
     "start": "nuxt start",
-    "build": "nuxt generate --modern --quiet",
+    "build": "nuxt generate --modern",
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
+    "@nuxt/http": "^0.6.4",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3"

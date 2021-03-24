@@ -32,7 +32,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxt/http'],
 
   // Tailwind config (https://tailwindcss.nuxtjs.org/)
   tailwindcss: {
